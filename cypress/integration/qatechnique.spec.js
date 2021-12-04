@@ -1,7 +1,11 @@
+import search from "../pageObjectModel/search"
+
 describe("test technique", ()=>{
     it("choix du médecin", ()=>{
+        let search_ = new search()
         cy.visit("https://www.staging.maiia.com/")
-        cy.get('#downshift_input_0').type("test qatechnique")
+        search_.searchDoctor()
+        .type("test qatechnique")
         cy.get(".search-item").click()
         cy.get("#consultationReasonName").click()
         cy.get('[data-cy="Ablation de fils"]').click()
