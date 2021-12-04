@@ -5,5 +5,6 @@ describe("test technique", ()=>{
         cy.get(".search-item").click()
         cy.get("#consultationReasonName").click()
         cy.get('[data-cy="Ablation de fils"]').click()
+        cy.get("#rdv > div > form > div.rdv__availability > div.search-card__rdv.availability-calendar.percy-hidden")
     })
 })
